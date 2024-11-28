@@ -1,14 +1,13 @@
 console.log(`Hey there`)
 
-//window.alert(`This is an alert`)
+let x = 84;
+let firstname = "Sergei";
 
-// This is a comment
+let age = 24;
+let price = 21.55
 
-/*
-This is 
-a multi line 
-comment
-*/
+console.log(age);
 
-document.getElementById("helloH1").textContent = `Hello!`;
-document.getElementById("loremP1").textContent = `Now this isn't Lorem anymore`;
+console.log(`Your name is ${firstname}, and you are ${age} years old.`)
+console.log(typeof age)
+console.log(typeof price)
