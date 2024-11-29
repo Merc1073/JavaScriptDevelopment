@@ -1,13 +1,23 @@
-console.log(`Hey there`)
+let x = 10;
 
-let x = 84;
-let firstname = "Sergei";
+x += 2;
+console.log(x)
 
-let age = 24;
-let price = 21.55
+x -= 2;
+console.log(x)
 
-console.log(age);
+x *= 2;
+console.log(x)
 
-console.log(`Your name is ${firstname}, and you are ${age} years old.`)
-console.log(typeof age)
-console.log(typeof price)
+x /= 2;
+console.log(x)
+
+x **= 2;
+console.log(x)
+
+remainder = x & 2;
+console.log(remainder)
+
+let result = 1 + 2 * 3 + 4 / 5 ** 2;
+
+console.log(result)
