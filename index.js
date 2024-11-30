@@ -1,23 +1,8 @@
-let x = 10;
+let username;
 
-x += 2;
-console.log(x)
+document.getElementById("MySubmit").onclick = function()
+{
+    username = document.getElementById("MyText").value;
+    document.getElementById("MyName").textContent = `Your name is: ${username}`
+}
 
-x -= 2;
-console.log(x)
-
-x *= 2;
-console.log(x)
-
-x /= 2;
-console.log(x)
-
-x **= 2;
-console.log(x)
-
-remainder = x & 2;
-console.log(remainder)
-
-let result = 1 + 2 * 3 + 4 / 5 ** 2;
-
-console.log(result)
