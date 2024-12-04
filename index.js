@@ -1,26 +1,28 @@
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
+console.log(Math.PI);
 
-const countLabel = document.getElementById("countLabel");
+console.log(Math.E);
 
-let count = 0;
+let x = 6.37;
+let y = 8;
+let z;
 
+let a = -185;
 
-increaseBtn.onclick = function()
-{
-    count++;
-    countLabel.textContent = count;
-}
+z = Math.round(x);
 
-decreaseBtn.onclick = function()
-{
-    count--;
-    countLabel.textContent = count;
-}
+console.log(Math.floor(x));
+console.log(Math.ceil(x));
+console.log(Math.trunc(x));
+console.log(Math.pow(x, y));
+console.log(Math.sqrt(x));
 
-resetBtn.onclick = function()
-{
-    count = 0;
-    countLabel.textContent = count;
-}
+console.log(Math.log(x));
+console.log(Math.sin(x));
+console.log(Math.cos(x));
+console.log(Math.tan(x));
+
+console.log(Math.abs(a));
+console.log(Math.sign(x));
+
+console.log(Math.max(x, y, z));
+console.log(Math.min(x, y, z));
