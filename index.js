@@ -1,9 +1,27 @@
-const button = document.getElementById("rollButton");
-let randomNumber = document.getElementById("randomNumberLabel");
+const ageInput = document.getElementById("ageInput");
+const mySubmit = document.getElementById("ageButton");
+const resultElement = document.getElementById("resultParagraph");
 
-randomNumber.textContent = 5;
+let age;
 
-button.onclick = function()
+mySubmit.onclick = function()
 {
-    randomNumber.textContent = Math.floor(Math.random() * 6) + 1;
+
+    age = ageInput.value;
+    age = Number(age);
+
+    if(age >= 18)
+        {
+            resultElement.textContent = `Welcome to the site.`;
+        }
+        
+        else if(age < 0)
+        {
+            resultElement.textContent = `You haven't been born yet!`;
+        }
+        
+        else
+        {
+            resultElement.textContent = `You must be 18+ to enter this site.`;
+        }
 }
