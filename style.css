@@ -2,33 +2,27 @@ body
 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
-}
-
-#countLabel
-{
-    display: block;
-    text-align: center;
-    font-size: 10em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#btnContainer
-{
     text-align: center;
 }
 
-.buttons
+#rollButton
 {
-    padding: 10px 20px;
-    font-size: 1.5em;
-    color: white;
-    background-color: rgb(183, 0, 255);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.25s;
+    padding: 5px 25px;
+    font-size: 2em;
+    border-radius: 16px;
 }
 
-.buttons:hover
+#rollButton:hover
 {
-    background-color: rgb(255, 47, 47);
+    background-color: lightblue;
+}
+
+#rollButton:active
+{
+    background-color: rgb(232, 169, 255);
+}
+
+#randomNumberLabel
+{
+    font-size: 2em;
 }
