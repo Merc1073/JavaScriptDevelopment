@@ -1,27 +1,52 @@
-const ageInput = document.getElementById("ageInput");
-const mySubmit = document.getElementById("ageButton");
-const resultElement = document.getElementById("resultParagraph");
+const minNum = 1;
+const maxNum = 100;
 
-let age;
+const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
-mySubmit.onclick = function()
+let attempts = 0;
+let guess;
+let running = true;
+
+while(running)
 {
+    guess = window.prompt(`Guess the number between ${minNum} - ${maxNum}`);
+    guess = Number(guess);
 
-    age = ageInput.value;
-    age = Number(age);
+    if(isNaN(guess))
+    {
+        window.alert(`Please enter a valid number.`);
+    }
 
-    if(age >= 18)
+    else if(guess > maxNum)
+    {
+        window.alert(`Number cannot exceed maximum number of ${maxNum}.`)
+    }
+
+    else if(guess < minNum)
+    {
+        window.alert(`Number cannot go below minimum number of ${minNum}.`)
+    }
+
+    else
+    {
+        attempts++;
+        if(guess < answer)
         {
-            resultElement.textContent = `Welcome to the site.`;
+            window.alert(`Too low!`)
         }
-        
-        else if(age < 0)
+
+        else if(guess > answer)
         {
-            resultElement.textContent = `You haven't been born yet!`;
+            window.alert(`Too high!`)
         }
-        
+
         else
         {
-            resultElement.textContent = `You must be 18+ to enter this site.`;
+            window.alert(`Correct! The answer is ${answer}. Total attempts: ${attempts}.`)
+            running = false;
         }
+    }
+
 }
+
+console.log(answer);
