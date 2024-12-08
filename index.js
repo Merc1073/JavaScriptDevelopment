@@ -1,50 +1,27 @@
-// Learning Functions
+// Local + Global scope
 
-function repetitiveCode()
+
+// Here, x is a local variable, because it's inside of a function, so it's local to that function and cannot be used elsewhere
+function doSomething()
 {
-    console.log("This");
-    console.log("is");
-    console.log("a");
-    console.log("very");
-    console.log("long");
-    console.log("sentence!");
+    let x = 1;
+    console.log(x);
 }
 
-repetitiveCode();
-repetitiveCode();
-repetitiveCode();
-
-
-
-
-
-// Passing parameters/arguments
-function addTwoNums(a, b)
+function doSomethingElse()
 {
-    return a + b;
+    let x = 2;
+    console.log(x);
 }
 
-let result = addTwoNums(4, 7);
+// This is a global variable, and can be used anywhere
+let x = 25;
 
-console.log(result);
-
-
-
-
-
-// Check if number is even or odd
-function evenOrOdd(num)
+function doSomethingElseAgain()
 {
-    if(num % 2 == 0)
-    {
-        console.log(`${num} is even.`)
-    }
-
-    else
-    {
-        console.log(`${num} is odd.`)
-    }
+    console.log(x);
 }
 
-
-evenOrOdd(68);
+doSomething();
+doSomethingElse();
+doSomethingElseAgain();
