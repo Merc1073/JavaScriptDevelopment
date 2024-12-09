@@ -1,27 +1,31 @@
-// Local + Global scope
+let arrayExample = ["one", "two", "three"];
+
+console.log(arrayExample[0]);
+console.log(arrayExample[1]);
+console.log(arrayExample[2]);
+
+arrayExample[2] = "four";
+console.log(arrayExample[2]);
+
+let numOfElements = arrayExample.length;
+
+let index = arrayExample.indexOf("two");
+console.log(index);
 
 
-// Here, x is a local variable, because it's inside of a function, so it's local to that function and cannot be used elsewhere
-function doSomething()
+for(let i = 0; i < numOfElements; i++)
 {
-    let x = 1;
-    console.log(x);
+    console.log(arrayExample[i]);
 }
 
-function doSomethingElse()
+for(let num of arrayExample)
 {
-    let x = 2;
-    console.log(x);
+    console.log(num);
 }
 
-// This is a global variable, and can be used anywhere
-let x = 25;
+arrayExample.sort().reverse();
 
-function doSomethingElseAgain()
-{
-    console.log(x);
-}
-
-doSomething();
-doSomethingElse();
-doSomethingElseAgain();
+for(let num of arrayExample)
+    {
+        console.log(num);
+    }
