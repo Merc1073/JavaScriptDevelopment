@@ -1,28 +1,67 @@
-/*
-
-    Spread operator: expands an iterable, such as a string or an array, into separate elements.
-
-*/
+// Rest = Bundles elements into an array for a function to work with (the opposite of what spread does.)
 
 
+function openFridge(...foods)
+{
+    console.log(foods);
+}
 
-let numbers = [1, 2, 3, 4, 5];
+const food1 = "banana";
+const food2 = "apple";
+const food3 = "orange";
+const food4 = "pineapple";
 
-//not spread (output: NaN)
-console.log(Math.max(numbers));
-
-//spread (output: 5)
-console.log(Math.max(...numbers));
-
+openFridge(food1, food2, food3, food4);
 
 
-//combining arrays
-let fruits = ["apple", "orange", "banana"];
-let vegetables = ["cucumber", "lettuce", "radish"];
+function getFoods(...foods)
+{
+    return foods;
+}
 
-let food = [...fruits, ...vegetables];
+const foods2 = getFoods(food1, food2, food3, food4);
+console.log(foods2);
 
-console.log(...fruits);
-console.log(...vegetables);
 
-console.log(...food);
+
+function sum(...numbers)
+{
+    result = 0;
+
+    for(let number of numbers)
+    {
+        result += number;
+    }
+
+    return result;
+}
+
+
+function getAverage(...numbers)
+{
+    result = 0;
+
+    for(let number of numbers)
+    {
+        result += number;
+    }
+
+    return result / numbers.length;
+}
+
+
+total = sum(1, 2, 3, 4, 5);
+average = getAverage(1, 2, 3, 4, 5);
+
+console.log(total);
+console.log(average);
+
+
+
+function combineStrings(...strings)
+{
+    return strings.join(" ");
+}
+
+const exampleSentence = combineStrings("this", "is", "a", "sentence!");
+console.log(exampleSentence);
