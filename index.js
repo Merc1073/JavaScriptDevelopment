@@ -1,67 +1,14 @@
-// Rest = Bundles elements into an array for a function to work with (the opposite of what spread does.)
+// callback = a function that is passed as an argument to another function
 
+sum(displayConsole, 1, 2);
 
-function openFridge(...foods)
+function sum(callback, x, y)
 {
-    console.log(foods);
+    let result = x + y;
+    callback(result);
 }
 
-const food1 = "banana";
-const food2 = "apple";
-const food3 = "orange";
-const food4 = "pineapple";
-
-openFridge(food1, food2, food3, food4);
-
-
-function getFoods(...foods)
+function displayConsole(result)
 {
-    return foods;
+    console.log(result);
 }
-
-const foods2 = getFoods(food1, food2, food3, food4);
-console.log(foods2);
-
-
-
-function sum(...numbers)
-{
-    result = 0;
-
-    for(let number of numbers)
-    {
-        result += number;
-    }
-
-    return result;
-}
-
-
-function getAverage(...numbers)
-{
-    result = 0;
-
-    for(let number of numbers)
-    {
-        result += number;
-    }
-
-    return result / numbers.length;
-}
-
-
-total = sum(1, 2, 3, 4, 5);
-average = getAverage(1, 2, 3, 4, 5);
-
-console.log(total);
-console.log(average);
-
-
-
-function combineStrings(...strings)
-{
-    return strings.join(" ");
-}
-
-const exampleSentence = combineStrings("this", "is", "a", "sentence!");
-console.log(exampleSentence);
