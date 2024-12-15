@@ -1,14 +1,13 @@
-// callback = a function that is passed as an argument to another function
+// reduce = reduces elements of an array to a single value
 
-sum(displayConsole, 1, 2);
+const items = [10, 20, 30, 40, 50];
 
-function sum(callback, x, y)
+const total = items.reduce(sum);
+
+console.log(`$${total.toFixed(2)}`);
+
+function sum(previous, next)
 {
-    let result = x + y;
-    callback(result);
+    return previous + next;
 }
 
-function displayConsole(result)
-{
-    console.log(result);
-}
